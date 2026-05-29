@@ -82,13 +82,13 @@ _Add screenshots or GIFs of the project here._
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/digital-world.git
+git clone https://github.com/satyammaurya-18/Dgital-World.git
 ````
 
 2. Open the project folder:
 
 ```bash
-cd digital-world
+cd Digital-World
 ```
 
 3. Run the project by opening `index.html` in your browser.
@@ -111,5 +111,3 @@ This project helped enhance:
 
 This project is created for educational and learning purposes.
 
-```
-```
