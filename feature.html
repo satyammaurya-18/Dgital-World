@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature | REJOUSE®</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="Main_style.css">
+
+
+    <style>
+        .about-heading {
+            text-align: center;
+            font-size: 3.5vw;
+            overflow: hidden;
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            letter-spacing: 3px;
+            transform: translateX(-50%);
+        }
+
+        .about-heading h1 {
+            overflow: hidden;
+            font-family: heading1;
+        }
+
+        #page1 {
+            background: black;
+            color: white;
+            width: 100%;
+            height: 90vh;
+        }
+
+        #page3 {
+            padding: 2vw 4vw;
+            background: black;
+            color: white;
+        }
+
+        #page3 .content-container {
+            padding: 1.5vw 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+            width: 100%;
+        }
+
+        #page3 .content-container .content {
+            flex-basis: 30%;
+            font-size: 1.7vw !important;
+            text-align: left !important;
+        }
+
+        .content-container .content .topic-heading {
+            font-weight: 100;
+            font-family: heading1;
+        }
+
+        .topic-no {
+            font-size: 1.5vw;
+            font-family: heading1;
+        }
+
+        .topic-heading {
+            padding-top: 1vw;
+            padding-bottom: 2vw;
+            text-decoration: underline;
+        }
+
+
+        #page3 {
+            /* height: 70vh !important; */
+            width: 100%;
+        }
+
+        .feature-container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .feature-wraper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+        }
+
+        .feature-wraper .main-img {
+            width: 50%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .feature-wraper .main-img video {
+            width: 50vw;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .feature-wraper .secondaary-img {
+            width: 50%;
+        }
+
+        #portfolio {
+            width: 100%;
+            height: 100%;
+            padding: 50px 0;
+        }
+
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            /* margin-top: 50px; */
+
+        }
+
+        .work {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: trnsform 0.7s;
+        }
+
+        .work:hover img {
+            transform: scale(1.1);
+            transition: transform 0.7s;
+        }
+
+        .work i {
+            color: black;
+        }
+
+        .work:hover .layer {
+            height: 100%;
+            transition: height 0.5s;
+
+        }
+
+        .layer {
+            width: 100%;
+            height: 00%;
+            font-size: 15px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), #FF5F38);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+            text-align: center;
+            transition: height 0.5s;
+        }
+
+        .layer h3 {
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .layer a {
+            margin-top: 20px;
+            color: #FF5F38;
+            font-size: 20px;
+            line-height: 60px;
+            background-color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .btn {
+            display: block;
+            margin: 50px auto;
+            width: fit-content;
+            border: 1px solid #FF5F38;
+            padding: 14px 50px;
+            color: #FF5F38;
+            transition: all 0.5s;
+
+        }
+
+        .btn:hover {
+            background-color: #FF5F38;
+            color: white;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader">
+        <h2>0%</h2>
+    </div>
+
+    <div id="main">
+
+        <nav id="nav-bar" class="active">
+            <div class="nav-container">
+                <div class="left-nav">
+                    <video src="nav img.mp4" loop autoplay muted></video>
+                    <div class="video-con">
+                        <span>Plat Reel!</span>
+                        <span>-01:08</span>
+                    </div>
+                </div>
+                <div class="right-nav">
+                    <h4 id="close-menu-btn">Close</h4>
+                    <ul>
+                        <a href="index.html">
+                        <li>Home</li>
+                        </a>
+                        <a href="About.html">
+                            <li>About</li>
+                        </a>
+                        <a href="Feature.html">
+                            <li>Feature</li>
+                        </a>
+                        <a href="Login.html">
+                            <li>Login</li>
+                        </a>
+                        <a href="Registeration.html">
+                            <li>Register</li>
+                        </a>
+                        <button>Take a Seat</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="page1">
+            <div id="cursor">
+                <h5>Play!</h5>
+            </div>
+            <div class="about-heading">
+                <h1>Feature</h1>
+                <h1>of</h1>
+                <h1>Digital World</h1>
+            </div>
+            <div id="page1-content">
+                <nav>
+                    <h3>The Venture Agency</h3>
+                    <h4 id="open-menu-btn">Menu</h4>
+                    <!-- <h4 id="close-menu-btn">Close</h4> -->
+                </nav>
+            </div>
+        </div>
+
+        <div id="page2">
+            <div class="elm-top">
+                <div class="elm-left">
+                    <h4>Feature of</h4>
+                    <h4>Digital World</h4>
+                </div>
+                <div class="elm-right">
+                    <h4>With GPT</h4>
+                </div>
+            </div>
+            <div id="elem">
+                <h1 id="page2Span">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The digital world is characterized by
+                    <h1>seamless interconnectivity, where information is </h1>
+                    <h1>represented numerically using binary code. It </h1>
+                    <h1>encompasses a diverse range of devices, operates</h1>
+                    <h1> within interconnected networks, and features </h1>
+                    <h1>automation, artificial intelligence, and global</h1>
+                    <h1> accessibility.</h1>
+            </div>
+        </div>
+
+        <div id="page3">
+            <div class="feature-container">
+                <div class="feature-wraper">
+                    <div class="main-img">
+                        <video src="Website-homepage-Work-01_1.mp4" loop autoplay muted></video>
+                    </div>
+                    <div class="secondary-img">
+                        <div id="portfolio">
+                            <div class="faeture-container">
+                                <div class="work-list">
+                                    <div class="work">
+                                        <img src="box img 1.avif" alt="work">
+                                        <div class="layer">
+                                            <h3>Social Media App</h3>
+                                            <p>The app connect you to the talented people around the world. Download it
+                                                from play store</p>
+                                            <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="work">
+                                        <img src="460fab4d-6e2c-4267-b361-2f232c04af19_ListAcross.jpg" alt="work">
+                                        <div class="layer">
+                                            <h3>Music App</h3>
+                                            <p>The app connect you to the talented people around the world. Download it
+                                                from play store</p>
+                                            <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="work">
+                                        <img src="41231e86-1f8b-4002-852d-246131b1bdca_Tenzr.jpg" alt="work">
+                                        <div class="layer">
+                                            <h3>Music App</h3>
+                                            <p>The app connect you to the talented people around the world. Download it
+                                                from play store</p>
+                                            <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="work">
+                                        <img src="box img 2.avif" alt="work">
+                                        <div class="layer">
+                                            <h3>Online Shoping App</h3>
+                                            <p>The app connect you to the talented people around the world. Download it
+                                                from play store</p>
+                                            <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer id="footer">
+            <div class="footer-heading">
+                <p>We’re uniquely built↵</p>
+                <h2>Meet Our Team</h2>
+            </div>
+            <div class="main-footer">
+                <div class="footer-top">
+                    <div class="footer-top-left">
+                        <h3>Relax. We Got You</h3>
+                        <button>Take a seat</button>
+                    </div>
+                    <div class="footer-top-right">
+                        <ul>
+                            <a class="active" href="index.html">
+                                <li style="color: white;">Home</li>
+                            </a>
+                            <a href="About.html">
+                                <li style="color: white;">About</li>
+                            </a>
+                            <a href="Feature.html">
+                                <li style="color: white;">Feature</li>
+                            </a>
+                            <a href="Login.html">
+                                <li style="color: white;">Login</li>
+                            </a>
+                            <a href="Registeration.html">
+                                <li style="color: white;">Register</li>
+                            </a>
+                        </ul>
+                        <div class="footer-socail-media">
+                            <li> <a href="">X→</a></li>
+                            <li><a href="">Instagram→</a></li>
+                            <li> <a href="">LinkedIn→</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-left">
+                        <p>San Diego—California</p>
+                        <p>Paris—France</p>
+                    </div>
+                    <div class="footer-bottom-right">
+                        <p>biz@rejouice.com</p>
+                        <p>©2023 legal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="brand">
+                <h1><span>D</span><span>i</span><span>g</span><span>i</span><span>t</span><span>a</span><span>l</span>
+                    <span>w</span><span>o</span><span>r</span><span>l</span><span>d</span>
+                </h1>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+        integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="Main_script.js"></script>
+
+
+    <script>
+        footerAnimation()
+        function footerAnimation() {
+            gsap.from(".brand h1 span", {
+                y: -150,
+                opacity: 0,
+                duration: 1,
+                delay: 0.5,
+                duration: 2,
+                stagger: 0.5,
+                scrollTrigger: {
+                    trigger: "#footer",
+                    scroller: "#main",
+                    start: "top -30%",
+                    end: "top 60%",
+                    // markers: true,
+                    scrub: 5
+                }
+            });
+
+            gsap.from(".footer-top-left h3,.footer-top-right li,.footer-socail-media li", {
+                y: -150,
+                opacity: 0,
+                duration: 1,
+                delay: 0.5,
+                duration: 2,
+                stagger: 0.5,
+                scrollTrigger: {
+                    trigger: "#footer",
+                    scroller: "#main",
+                    start: "top 10%",
+                    end: "top 60%",
+                    // markers: true,
+                    scrub: 5
+                }
+            });
+            gsap.from(".footer-bottom-left p", {
+                x: -150,
+                opacity: 0,
+                duration: 1,
+                delay: 0.5,
+                duration: 1,
+                stagger: 0.5,
+                scrollTrigger: {
+                    trigger: "#footer",
+                    scroller: "#main",
+                    start: "top 10%",
+                    end: "top 60%",
+                    // markers: true,
+                    scrub: 5
+                }
+            });
+            gsap.from(".footer-bottom-right p", {
+                x: 150,
+                opacity: 0,
+                duration: 1,
+                delay: 0.5,
+                duration: 1,
+                stagger: 0.5,
+                scrollTrigger: {
+                    trigger: "#footer",
+                    scroller: "#main",
+                    start: "top 10%",
+                    end: "top 60%",
+                    // markers: true,
+                    scrub: 5
+                }
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
