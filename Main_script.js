@@ -31,3 +31,20 @@ function locoMotiveScroller() {
     ScrollTrigger.refresh();
 
 }
+
+
+onload()
+
+function onload() {
+    loadingAnimation();
+    headingAnimation();
+    cursorAnimation();
+    page2Animation();
+    page3Animation();
+    page4Animation();
+    headerAnimation();
+    Page5CursorAnimation();
+    page5LoadingAnimation();
+    sliderAnimation();
+    footerAnimation();
+}
