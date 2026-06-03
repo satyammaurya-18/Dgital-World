@@ -93,3 +93,106 @@ function loadingAnimation() {
     })
 
 }
+
+
+function headingAnimation() {
+    let tl = gsap.timeline();
+    tl.to('#page1 #page1-heading', {
+        transform: 'translateX(-95%)',
+        fontWeight: "100",
+        scrollTrigger: {
+            trigger: "#page1",
+            scroller: "#main",
+            // markers: true,
+            start: "top 0%",
+            end: "top -100%",
+            scrub: 2,
+            pin: true
+        }
+    })
+}
+
+function headerAnimation() {
+    let tl = gsap.timeline();
+    let openBtn = document.querySelector('#open-menu-btn');
+    let closeBtn = document.querySelector('#close-menu-btn');
+    let menuContainer = document.querySelector('.nav-container')
+    openBtn.addEventListener('click', () => {
+        gsap.to('.nav-container', {
+            y: { value: 0 },
+            duration: 1,
+            stagger: 0.5,
+            opacity: 1,
+        });
+        openBtn.style.display = 'none';
+        closeBtn.style.display = 'block';
+
+        gsap.to('.left-nav video', {
+            scale: 1,
+            opacity: 1,
+            duration: 1,
+            delay: 0.5,
+        });
+        gsap.to('.left-nav .video-con span', {
+            y: 20,
+            scale: 1,
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.3,
+            delay: 1,
+        });
+
+        gsap.to('.right-nav ul li', {
+            scale: 1,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.01,
+            delay: 1.5,
+        });
+        gsap.to('.right-nav ul button', {
+            scale: 1,
+            opacity: 1,
+            delay: 1,
+            duration: 1,
+            stagger: 0.1,
+        });
+
+    })
+    closeBtn.addEventListener('click', () => {
+        gsap.to(menuContainer, {
+            opacity: 0,
+            y: -800,
+            duration: 1,
+        });
+
+        openBtn.style.display = 'block';
+        closeBtn.style.display = 'none';
+
+        gsap.to('.left-nav video', {
+            scale: 0,
+            opacity: 0,
+            duration: 1,
+        });
+
+        gsap.to('.left-nav .video-con span', {
+            y: 0,
+            scale: 0,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.3
+        });
+        gsap.to('.right-nav ul li', {
+            scale: 0,
+            opacity: 0,
+            stagger: 0.1,
+            duration: 1,
+        });
+        tl.to('.right-nav ul button', {
+            scale: 0,
+            opacity: 0,
+            delay: 0.5,
+            duration: 1,
+            stagger: 0.1,
+        });
+    });
+}
