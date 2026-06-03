@@ -324,3 +324,92 @@ function page3Animation() {
         }
     });
 }
+
+
+function page4Animation() {
+
+    gsap.from("#page4 h1", {
+        y: 120,
+        stagger: 0.25,
+        duration: 1,
+        stagger: 0.2,
+        duration: 1,
+        scrollTrigger: {
+            trigger: " #page4",
+            scroller: "#main",
+            start: "top 40%",
+            end: "top 46%",
+            // markers: true,
+            scrub: 5
+        }
+    });
+
+    gsap.to("#page4 .elm-left h4", {
+        opacity: 1,
+        scale: 1,
+        stagger: 0.25,
+        duration: 1,
+        stagger: 0.2,
+        duration: 1,
+        scrollTrigger: {
+            trigger: " #page4",
+            scroller: "#main",
+            start: "top 60%",
+            end: "top 46%",
+            // markers: true,
+            scrub: 5
+        }
+    });
+    // gsap.from("#page4 .elm-right h4", {
+    //     x: -120,
+    //     stagger: 0.25,
+    //     duration: 1,
+    //     stagger: 0.2,
+    //     duration: 1,
+    //     scrollTrigger: {
+    //         trigger: " #page4",
+    //         scroller: "#main",
+    //         start: "top 60%",
+    //         end: "top 46%",
+    //         // markers: true,
+    //         scrub: 5
+    //     }
+    // });
+}
+
+function Page5CursorAnimation() {
+    let page5Content = document.querySelector('#page5');
+    let cursor = document.querySelector('#page5-cursor');
+
+    page5Content.addEventListener('mousemove', (event) => {
+        gsap.to(cursor, {
+            x: event.x,
+            y: event.y
+        })
+    });
+    page5Content.addEventListener('mouseenter', (event) => {
+        gsap.to(cursor, {
+            scale: 1,
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+                trigger: " #page4",
+                scroller: "#main",
+                start: "top 0%",
+                end: "top -106%",
+                // markers: true,
+                scrub: 5
+            }
+        });
+    });
+    page5Content.addEventListener('mouseleave', (event) => {
+        gsap.to(cursor, {
+            scale: 0,
+            opacity: 0,
+            duration: 1,
+        });
+    });
+
+
+
+}
