@@ -48,3 +48,48 @@ function onload() {
     sliderAnimation();
     footerAnimation();
 }
+
+function loadingAnimation() {
+    let tl = gsap.timeline();
+    loading();
+    function loading() {
+        let loder = document.querySelector('#loader h2');
+        console.log(loder);
+        let a = 0;
+        setInterval(() => {
+            if (a < 100) {
+                a += Math.floor(Math.random() * 10) + 1;
+                loder.innerHTML = a + '%';
+            } else {
+                a = 100;
+                loder.innerHTML = a + '%';
+            }
+
+        }, 200);
+    }
+
+
+
+    tl.to("#loader h2", {
+        scale: 1.5,
+        delay: 0.5,
+        opacity: 1,
+        duration: 1,
+        onStart: loading()
+    })
+    tl.to("#loader", {
+        top: "-100vh",
+        delay: 2,
+        duration: 1,
+        onStart: loading()
+    });
+    tl.from('.about-heading h1', {
+        y: 320,
+        opacity: 0,
+        scale: 1,
+        delay: 0,
+        duration: 1,
+        stagger: 0.1,
+    })
+
+}
