@@ -501,3 +501,93 @@ function sliderAnimation() {
         },
     });
 }
+
+function footerAnimation() {
+    gsap.from(".brand h1 span", {
+        y: -150,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        duration: 2,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#footer",
+            scroller: "#main",
+            start: "top -30%",
+            end: "top 60%",
+            // markers: true,
+            scrub: 5
+        }
+    });
+
+    gsap.from(".footer-top-left h3,.footer-top-right li,.footer-socail-media li", {
+        y: -150,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        duration: 2,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#footer",
+            scroller: "#main",
+            start: "top 10%",
+            end: "top 60%",
+            // markers: true,
+            scrub: 5
+        }
+    });
+    gsap.from(".footer-bottom-left p", {
+        x: -150,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        duration: 1,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#footer",
+            scroller: "#main",
+            start: "top 10%",
+            end: "top 60%",
+            // markers: true,
+            scrub: 5
+        }
+    });
+    gsap.from(".footer-bottom-right p", {
+        x: 150,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        duration: 1,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#footer",
+            scroller: "#main",
+            start: "top 10%",
+            end: "top 60%",
+            // markers: true,
+            scrub: 5
+        }
+    });
+}
+
+aboutSection()
+
+function aboutSection() {
+    gsap.from(".content div", {
+        y: -150,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        duration: 2,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#page3",
+            scroller: "#main",
+            start: "top -30%",
+            end: "top 60%",
+            // markers: true,
+            scrub: 5
+        }
+    });
+
+}
