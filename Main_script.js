@@ -591,3 +591,5 @@ function aboutSection() {
     });
 
 }
+
+about()
