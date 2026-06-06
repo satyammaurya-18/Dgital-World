@@ -601,3 +601,384 @@ footer {
     display: inline-block;
     text-transform: uppercase;
 }
+
+/* =========================
+   RESPONSIVE CSS
+========================= */
+
+@media (max-width: 1200px) {
+
+    #page1-content h1 {
+        font-size: 24vw;
+        letter-spacing: -10px;
+    }
+
+    .nav-container .right-nav ul li {
+        font-size: 4vw;
+    }
+
+    .nav-container .right-nav ul button {
+        font-size: 1.5vw;
+    }
+
+    #page3-elements {
+        width: 95%;
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    #cursor,
+    #page5-cursor {
+        display: none;
+    }
+
+    #page1-content nav {
+        padding: 5vw;
+    }
+
+    #page1-content nav h3,
+    #page1-content nav h4 {
+        font-size: 2.5vw;
+    }
+
+    #close-menu-btn {
+        font-size: 2.5vw;
+        top: 5vw;
+        right: 5vw;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 5vw;
+        padding: 10vw 5vw;
+    }
+
+    .nav-container .left-nav video {
+        width: 60vw;
+    }
+
+    .nav-container .right-nav {
+        margin-right: 0;
+    }
+
+    .nav-container .right-nav ul li {
+        font-size: 6vw;
+    }
+
+    .nav-container .right-nav ul button {
+        font-size: 2vw;
+        padding: 12px 18px;
+    }
+
+    #page1-content h1 {
+        font-size: 22vw;
+        letter-spacing: -6px;
+        line-height: 20vw;
+    }
+
+    #page2,
+    #page4 {
+        height: auto;
+        padding: 10vw 5vw;
+    }
+
+    .elm-top h4 {
+        font-size: 2.5vw;
+    }
+
+    #elem h1 {
+        font-size: 6vw;
+    }
+
+    #page3-top h4 {
+        font-size: 3vw;
+    }
+
+    #page3-top h4 span {
+        font-size: 2vw;
+    }
+
+    #page3-top h2 {
+        font-size: 5vw;
+    }
+
+    #page3-elements {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #page3-elements .box {
+        width: 48%;
+    }
+
+    #page5 {
+        height: auto;
+        padding: 10vw 0;
+    }
+
+    #page5 svg {
+        width: 80%;
+        height: 80%;
+    }
+
+    .page5-video h2 {
+        font-size: 6vw;
+    }
+
+    #page6 {
+        height: auto;
+    }
+
+    #page6-top h1 {
+        font-size: 10vw;
+    }
+
+    #swiper-div {
+        position: relative;
+        top: 0;
+        height: auto;
+        padding: 5vw;
+    }
+
+    .footer-heading {
+        height: auto;
+        padding: 10vw 5vw;
+        text-align: center;
+    }
+
+    .footer-heading p {
+        font-size: 3vw;
+    }
+
+    .footer-heading h2 {
+        font-size: 6vw;
+    }
+
+    .main-footer {
+        height: auto;
+        gap: 8vw;
+        padding: 6vw 5vw;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 6vw;
+    }
+
+    .footer-top-left h2 {
+        font-size: 4vw;
+    }
+
+    .footer-top-left button {
+        font-size: 2vw;
+    }
+
+    .footer-top-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .brand h1 {
+        font-size: 18vw;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    #loader h2 {
+        font-size: 12vw;
+    }
+
+    #page1 {
+        height: 100vh;
+    }
+
+    #page1-content nav {
+        padding: 6vw 5vw;
+    }
+
+    #page1-content nav h3,
+    #page1-content nav h4 {
+        font-size: 4vw;
+    }
+
+    #close-menu-btn {
+        font-size: 4vw;
+        top: 6vw;
+        right: 5vw;
+    }
+
+    .nav-container {
+        padding: 20vw 6vw;
+    }
+
+    .nav-container .left-nav video {
+        width: 100%;
+    }
+
+    .nav-container .right-nav ul {
+        padding-right: 0;
+    }
+
+    .nav-container .right-nav ul li {
+        font-size: 9vw;
+        margin-bottom: 2vw;
+    }
+
+    .nav-container .right-nav ul button {
+        font-size: 4vw;
+        width: 100%;
+    }
+
+    #page1-content h1 {
+        font-size: 20vw;
+        line-height: 18vw;
+        letter-spacing: -3px;
+    }
+
+    .elm-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2vw;
+    }
+
+    .elm-top h4 {
+        font-size: 4vw;
+    }
+
+    #elem h1 {
+        font-size: 9vw;
+        line-height: 110%;
+    }
+
+    #page3-top {
+        margin-top: 12vw;
+    }
+
+    #page3-top h4 {
+        font-size: 5vw;
+    }
+
+    #page3-top h4 span {
+        font-size: 3vw;
+        padding: 6px 10px;
+    }
+
+    #page3-top h2 {
+        font-size: 7vw;
+        padding: 0 5vw;
+    }
+
+    #page3-elements {
+        flex-direction: column;
+    }
+
+    #page3-elements .box {
+        width: 100%;
+    }
+
+    #page5 svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .page5-video h2 {
+        font-size: 8vw;
+    }
+
+    #page6-top h1 {
+        font-size: 13vw;
+        text-align: center;
+    }
+
+    .swiper-slide {
+        align-items: center;
+    }
+
+    .footer-heading p {
+        font-size: 4vw;
+    }
+
+    .footer-heading h2 {
+        font-size: 8vw;
+    }
+
+    .footer-top-left h2 {
+        font-size: 6vw;
+    }
+
+    .footer-top-left button {
+        width: 100%;
+        font-size: 4vw;
+    }
+
+    .footer-top-right {
+        flex-direction: column;
+        gap: 6vw;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .footer-bottom p {
+        font-size: 4vw;
+    }
+
+    .brand h1 {
+        font-size: 20vw;
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    #page1-content h1 {
+        font-size: 18vw;
+        line-height: 17vw;
+    }
+
+    #page1-content nav h3,
+    #page1-content nav h4 {
+        font-size: 4.5vw;
+    }
+
+    .nav-container .right-nav ul li {
+        font-size: 10vw;
+    }
+
+    #elem h1 {
+        font-size: 10vw;
+    }
+
+    #page3-top h2 {
+        font-size: 8vw;
+    }
+
+    .footer-heading h2 {
+        font-size: 9vw;
+    }
+
+    .brand h1 {
+        font-size: 22vw;
+    }
+}
